@@ -12,7 +12,7 @@ mkdir /rootfs/old.rootfs
 mount --bind / /rootfs/old.rootfs
 mkdir -p /rootfs/usr/lib/modules/
 cp -Lfr /lib/modules/* /rootfs/usr/lib/modules/
-chroot /rootfs /bin/sh -c '
+chroot /rootfs /bin/bash -c '
 cd /old.rootfs/etc/ &&
 cp -Pfr passwd group shadow hosts resolv.conf hostname sudoers sudoers.d /etc/ &&
 cd /old.rootfs &&
